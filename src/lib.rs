@@ -8,6 +8,7 @@ const NESTED_LOOP_LIMIT: usize = 1024;
 
 /// Change this to u16 for 16 bit cell support
 type Cell = u8;
+/// Calculate the MAX_SIZE for a Cell based on its number of bytes
 const MAX_SIZE: Cell = ((1 << (size_of::<Cell>() * 8)) - 1) as Cell;
 
 /// Trait for getting a character
