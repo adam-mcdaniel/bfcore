@@ -6,6 +6,7 @@ edition = "2018"
 categories = ["embedded", "no-std", "command-line-utilities", "development-tools::ffi"]
 description = "An interpreter for BrainF*ck without std or alloc"
 license = "MIT"
+repository = "https://github.com/adam-mcdaniel/bfcore"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [[example]]
