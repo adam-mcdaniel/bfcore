@@ -23,7 +23,7 @@ struct Out; impl Output for Out {}
 
 fn main() {
     Interpreter::new(
-        "+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[->++++<]>-.--------.+++.------.--------.-[--->+<]>.",
+        "+[----->+++<]>+.---.+++++++..+++.",
         In::default(),
         Out::default()
     ).run();
@@ -59,7 +59,7 @@ impl Output for Out {
 
 fn main() {
     Interpreter::new(
-        "+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[->++++<]>-.--------.+++.------.--------.-[--->+<]>.",
+        "+[----->+++<]>+.---.+++++++..+++.",
         In::default(),
         Out::default()
     ).run();
@@ -115,7 +115,7 @@ fn main() {
     // Create an interpreter with a program that prints hello world
     // Give it instances of our input and output structs
     Interpreter::new(
-        r#"+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[->++++<]>-.--------.+++.------.--------.-[--->+<]>."#,
+        r#"+[----->+++<]>+.---.+++++++..+++."#,
         MyInput::default(),
         MyOutput::default()
     ).run(); // Run the interpreter
@@ -123,5 +123,3 @@ fn main() {
 ```
 
 I don't have an example of this, but you could even use outputting non-printable characters to change the states of the input and output objects to do different things. You could have them switch between writing to files or to the screen by outputing special characters to switch modes, and more.
-
-
