@@ -1,6 +1,6 @@
 [package]
 name = "bfcore"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["adam-mcdaniel <adam.mcdanie17@gmail.com>"]
 edition = "2018"
 categories = ["embedded", "no-std", "command-line-utilities", "development-tools::ffi"]
