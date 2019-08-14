@@ -42,7 +42,7 @@ fn main() {
     // Give it instances of our input and output structs
     Interpreter::new(
         r#"+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[->++++<]>-.--------.+++.------.--------.-[--->+<]>."#,
-        MyInput::default(),
-        MyOutput::default()
+        &mut MyInput::default(),
+        &mut MyOutput::default()
     ).run(); // Run the interpreter
 }

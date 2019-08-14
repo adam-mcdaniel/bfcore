@@ -10,7 +10,7 @@ struct Out; impl Output for Out {}
 fn main() {
     Interpreter::new(
         "+[----->+++<]>+.---.+++++++..+++.[--->+<]>-----.--[->++++<]>-.--------.+++.------.--------.-[--->+<]>.",
-        In::default(),
-        Out::default()
+        &mut In::default(),
+        &mut Out::default()
     ).run();
 }

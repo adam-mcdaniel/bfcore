@@ -24,8 +24,8 @@ struct Out; impl Output for Out {}
 fn main() {
     Interpreter::new(
         "+[----->+++<]>+.---.+++++++..+++.",
-        In::default(),
-        Out::default()
+        &mut In::default(),
+        &mut Out::default()
     ).run();
 }
 ```
@@ -60,8 +60,8 @@ impl Output for Out {
 fn main() {
     Interpreter::new(
         "+[----->+++<]>+.---.+++++++..+++.",
-        In::default(),
-        Out::default()
+        &mut In::default(),
+        &mut Out::default()
     ).run();
 }
 ```
@@ -116,8 +116,8 @@ fn main() {
     // Give it instances of our input and output structs
     Interpreter::new(
         r#"+[----->+++<]>+.---.+++++++..+++."#,
-        MyInput::default(),
-        MyOutput::default()
+        &mut MyInput::default(),
+        &mut MyOutput::default()
     ).run(); // Run the interpreter
 }
 ```

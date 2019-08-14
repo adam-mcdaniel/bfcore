@@ -24,15 +24,15 @@ pub trait Output {
 }
 
 /// The struct containing the data for interpretting brainfuck code
-pub struct Interpreter<I, O>
+pub struct Interpreter<'a, I, O>
 where
     I: Input,
     O: Output,
 {
     // The object used to get input
-    input: I,
+    input: &'a mut I,
     // The object used to output
-    output: O,
+    output: &'a mut O,
 
     // The pointer to the current data cell
     data_ptr: usize,
@@ -63,13 +63,13 @@ fn instruction_tape_from_str(s: &str) -> [Cell; TAPE_SIZE] {
     tape
 }
 
-impl<I, O> Interpreter<I, O>
+impl<'a, I, O> Interpreter<'a, I, O>
 where
     I: Input,
     O: Output,
 {
     /// Create a new interpreter from a program, an input object, and an output object
-    pub fn new(program: &str, input: I, output: O) -> Self {
+    pub fn new(program: &str, input: &'a mut I, output: &'a mut O) -> Self {
         Self {
             input,
             output,
